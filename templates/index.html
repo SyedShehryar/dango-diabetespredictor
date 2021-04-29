@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+
+  <div class="jumbotron">
+        <br>
+        <br>
+  <h1 class="display-4">Predict Diabetes</h1>
+  <p class="lead">This system will help you in predicting your diabetes.</p>
+  <hr class="my-4">
+  <p>We will ask for some parameters and using them the system will make a prediction.</p>
+  <a class="btn btn-primary btn-lg" href="/about" role="button">Learn more</a>
+</div>
+
+<!-- Bottom -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-lg-6 predict">
+      <h3>Predict Diabetes !</h3>
+      <p>You can Predict your Diabetes here</p>
+        <p>Simple Steps</p>
+          <p>Accurate results </p>
+          <form method="get" action="predictor/predict">
+            <button type="submit" class="btn btn-danger">Predict</button>
+          </form>
+    </div>
+    <div class="col-sm-12 col-lg-6 find">
+      <h3>Find Doctors Near You !</h3>
+      <p>You can find Endocrinologists near you</p>
+        <p>Search for the nearest one</p>
+          <p>Consult them and get treated</p>
+            <form method="get" action="/doctors">
+            <button type="submit" class="btn btn-danger">Find Doctor</button>
+          </form>
+
+    </div>
+  </div>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,33 @@
+{{% extends 'base.html' %}
+
+{% block title %}Doctors{% endblock title %}
+
+{% block body %}
+
+<div class="container" id="doctors">
+        <br>
+        <br>
+        <br>
+        <br>
+
+<h1>Find Endrocronologists Near You .. </h1>
+    {% for doct in docts %}  
+    <br>
+    <br>
+<div class="media">
+  <img src="{{doct.img.url}}" class="align-self-start mr-3" alt="...">
+  <div class="media-body">
+    <h5 class="mt-0">{{doct.name}}</h5>
+    <p>Qualification  : {{doct.qualification}}</p>
+    <p>Contact Number : {{doct.contact}}</p>
+    <p>City : {{doct.city}}</p>
+    <p>Address : {{doct.address}}</p>
+     <br>
+  <br>
+  </div>
+ 
+</div>
+{% endfor %}
+</div>
+
+{% endblock body %}
